@@ -1,0 +1,36 @@
+{
+  "family_id": "IMR-TN-002",
+  "record_id": "IMR-TN-002/canonical",
+  "module": "F-transport-naturality",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Report tr(AB) and det(AB) for the given A,B.",
+  "answer_type": {
+    "kind": "Compound",
+    "encoding": [
+      "tr_AB",
+      "det_AB"
+    ]
+  },
+  "type_spec": {
+    "tr_AB": "int",
+    "det_AB": "int"
+  },
+  "gold": {
+    "tr_AB": 7,
+    "det_AB": -42
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "natural_invariant"
+  ],
+  "exclusions": [
+    "entry",
+    "eigenvector_component"
+  ],
+  "certificate_level": "L2"
+}

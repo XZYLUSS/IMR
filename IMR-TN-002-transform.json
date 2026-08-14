@@ -1,0 +1,52 @@
+{
+  "family_id": "IMR-TN-002",
+  "transforms": [
+    {
+      "id": "T1",
+      "kind": "simultaneous-basis-change",
+      "produces_record": "IMR-TN-002/T1",
+      "transport": "identity",
+      "transported_gold": {
+        "tr_AB": 7,
+        "det_AB": -42
+      },
+      "certificate": "certificate.sympy#T1"
+    },
+    {
+      "id": "T2",
+      "kind": "order-swap-AB-BA",
+      "produces_record": "IMR-TN-002/T2",
+      "transport": "identity",
+      "transported_gold": {
+        "tr_AB": 7,
+        "det_AB": -42
+      },
+      "certificate": "certificate.sympy#T2"
+    }
+  ],
+  "composite": {
+    "id": "T2oT1",
+    "transport": "identity",
+    "composite_gold": {
+      "tr_AB": 7,
+      "det_AB": -42
+    },
+    "certificate": "certificate.sympy#T2;certificate.sympy#T1"
+  },
+  "paraphrase": {
+    "id": "p",
+    "produces_record": "IMR-TN-002/paraphrase",
+    "content_change": false,
+    "note": "surface re-wording; gold identical"
+  },
+  "negative_control": {
+    "id": "n",
+    "produces_record": "IMR-TN-002/neg",
+    "answer": {
+      "tr_AB": "eigvec[0]",
+      "det_AB": "basis-dependent"
+    },
+    "anti_certificate": "certificate.sympy#neg",
+    "must_be_rejected_by_transport_checker": true
+  }
+}

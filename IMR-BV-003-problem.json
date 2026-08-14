@@ -1,0 +1,35 @@
+{
+  "family_id": "IMR-BV-003",
+  "record_id": "IMR-BV-003/canonical",
+  "module": "E-boundary-variation",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Vary S=int(1/2 xdot^2 - 1/2 w^2 x^2) dt: EOM class xddot+w^2 x=0 up to nonzero scalar, plus the endpoint condition.",
+  "answer_type": {
+    "kind": "Compound",
+    "encoding": [
+      "bulk",
+      "boundary_vanishes_iff"
+    ]
+  },
+  "type_spec": {
+    "bulk": "label",
+    "boundary_vanishes_iff": "label"
+  },
+  "gold": {
+    "bulk": "-(xddot+w^2x)",
+    "boundary_vanishes_iff": "{fixed_endpoints,periodic}"
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "optional",
+    "witness": "required"
+  },
+  "allowed_forms": [
+    "eom_plus_conditional_boundary"
+  ],
+  "exclusions": [
+    "unconditional_vanishing"
+  ],
+  "certificate_level": "L2"
+}

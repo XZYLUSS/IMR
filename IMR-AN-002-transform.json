@@ -1,0 +1,48 @@
+{
+  "family_id": "IMR-AN-002",
+  "transforms": [
+    {
+      "id": "T1",
+      "kind": "contour-deformation-in-punctured-plane",
+      "produces_record": "IMR-AN-002/T1",
+      "transport": "identity",
+      "transported_gold": {
+        "residue": 1
+      },
+      "certificate": "certificate.sympy#T1"
+    },
+    {
+      "id": "T2",
+      "kind": "biholomorphic-reparam",
+      "produces_record": "IMR-AN-002/T2",
+      "transport": "identity",
+      "transported_gold": {
+        "residue": 1
+      },
+      "certificate": "certificate.sympy#T2"
+    }
+  ],
+  "composite": {
+    "id": "T2oT1",
+    "transport": "identity",
+    "composite_gold": {
+      "residue": 1
+    },
+    "certificate": "certificate.sympy#T2;certificate.sympy#T1"
+  },
+  "paraphrase": {
+    "id": "p",
+    "produces_record": "IMR-AN-002/paraphrase",
+    "content_change": false,
+    "note": "surface re-wording; gold identical"
+  },
+  "negative_control": {
+    "id": "n",
+    "produces_record": "IMR-AN-002/neg",
+    "answer": {
+      "residue": 0
+    },
+    "anti_certificate": "certificate.sympy#neg",
+    "must_be_rejected_by_transport_checker": true
+  }
+}

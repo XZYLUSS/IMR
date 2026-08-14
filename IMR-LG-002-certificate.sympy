@@ -1,0 +1,12 @@
+# certificate.sympy -- IMR-LG-002
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+th,ph=symbols('theta phi'); F=Rational(1,2)*sin(th); dbeta=sin(2*th); assert integrate(integrate(dbeta,(th,0,pi)),(ph,0,2*pi))==0
+
+# CERT:T2
+th,ph=symbols('theta phi'); F=Rational(1,2)*sin(th); assert integrate(integrate(F,(th,0,pi)),(ph,0,2*pi))/(2*pi)==1
+
+# CERT:neg
+th,ph=symbols('theta phi'); F=Rational(1,2)*sin(th); val=integrate(integrate(F,(th,0,pi/2)),(ph,0,2*pi))/(2*pi); assert val==Rational(1,2) and val!=1  # 1/2 not in Z

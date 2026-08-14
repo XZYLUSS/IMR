@@ -1,0 +1,12 @@
+# certificate.sympy -- IMR-AN-002
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+z=symbols('z'); assert residue(1/z,z,0)==1  # residue at the simple pole
+
+# CERT:T2
+t=symbols('t'); assert integrate(I,(t,0,2*pi))/(2*pi*I)==1  # (1/2pi i) oint dz/z over |z|=1 (z=e^{it}) = 1
+
+# CERT:neg
+z=symbols('z'); assert residue(1/z**2,z,0)==0 and 0!=1  # double pole: residue 0, not the contour invariant 1

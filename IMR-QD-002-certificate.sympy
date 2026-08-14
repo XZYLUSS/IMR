@@ -1,0 +1,12 @@
+# certificate.sympy -- IMR-QD-002
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+U=diag(exp(I*pi/3),exp(-I*pi/3)); p1,p2,p3,p4=symbols('p1 p2 p3 p4'); P=Matrix([[p1,p2],[p3,p4]]); assert simplify((P*U*P.inv()).trace()-U.trace())==0
+
+# CERT:T2
+U=diag(exp(I*pi/3),exp(-I*pi/3)); g=Matrix([[cos(pi/4),I*sin(pi/4)],[I*sin(pi/4),cos(pi/4)]]); assert nsimplify(re((g*U*g.conjugate().T).trace()))==1
+
+# CERT:neg
+V=diag(I,-I); assert re(V.trace())==0 != 1  # different conjugacy class (det V = 1)

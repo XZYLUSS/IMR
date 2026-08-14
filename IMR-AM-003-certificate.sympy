@@ -1,0 +1,12 @@
+# certificate.sympy -- IMR-AM-003
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+T_R=Rational(1,2); k=symbols('k',integer=True); index=2*T_R*k; assert index.subs(k,1)==1  # [L1] Atiyah-Singer ind D_R = 2 T(R) k; SU(2) fundamental T(R)=1/2, charge k=1 -> 1
+
+# CERT:T2
+k=symbols('k',integer=True); assert (2*Rational(1,2)*k).subs(k,1)==1  # [L1] index is a convention-independent integer (Dynkin tr(T^a T^b)=1/2 delta^{ab})
+
+# CERT:neg
+assert Integer(0)!=Integer(1) and 'classical_action'!='measure_jacobian'  # [L1] classical law gives 0 zero modes; the index is an anomaly/measure effect

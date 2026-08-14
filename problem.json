@@ -1,0 +1,32 @@
+{
+  "family_id": "IMR-TN-004",
+  "record_id": "IMR-TN-004/canonical",
+  "module": "F-transport-naturality",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Trace of the commutator tr[A,B] = 0 (a natural, basis-independent invariant).",
+  "answer_type": {
+    "kind": "Integer",
+    "encoding": [
+      "tr_comm"
+    ]
+  },
+  "type_spec": {
+    "tr_comm": "int"
+  },
+  "gold": {
+    "tr_comm": 0
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "natural_invariant"
+  ],
+  "exclusions": [
+    "matrix_entry"
+  ],
+  "certificate_level": "L2"
+}

@@ -1,0 +1,33 @@
+{
+  "family_id": "IMR-QD-002",
+  "record_id": "IMR-QD-002/canonical",
+  "module": "A-quotient-descent",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Report the gauge-invariant Wilson loop W = tr U of an SU(2) holonomy.",
+  "answer_type": {
+    "kind": "QuotientClass",
+    "encoding": [
+      "wilson_loop"
+    ]
+  },
+  "type_spec": {
+    "wilson_loop": "int"
+  },
+  "gold": {
+    "wilson_loop": 1
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "conjugacy_class_invariant"
+  ],
+  "exclusions": [
+    "raw_matrix_entry",
+    "gauge_dependent_component"
+  ],
+  "certificate_level": "L2"
+}

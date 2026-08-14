@@ -1,0 +1,12 @@
+# certificate.sympy -- IMR-QD-001
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+P=Matrix([[1,1],[0,1]]); H=Matrix([[0,-1],[1,0]]); assert simplify((P.inv()*H*P).trace()-H.trace())==0
+
+# CERT:T2
+Q=diag(1,2); H=Matrix([[0,-1],[1,0]]); assert simplify((Q.inv()*H*Q).trace()-H.trace())==0
+
+# CERT:neg
+H=Matrix([[0,-1],[1,0]]); assert (H+eye(2)).trace()==2 != H.trace()  # trace shifts -> not a conjugation

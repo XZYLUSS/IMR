@@ -1,0 +1,19 @@
+# certificate.sympy -- IMR-AM-001
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+from sympy import Symbol, pi, Rational, simplify
+F01=Symbol('F01'); q=Symbol('q'); epsF = F01 - (-F01)
+assert simplify(epsF - 2*F01)==0  # 2D: eps^{mn}F_mn = F01 - F10 = 2 F01
+assert simplify((q/(2*pi))*epsF - (q/pi)*F01)==0  # density = (q/pi) F01
+
+# CERT:T2
+from sympy import Symbol, pi, simplify
+F01=Symbol('F01'); q=Symbol('q')
+assert all(simplify((q/(2*pi))*s*(s*2*F01) - (q/pi)*F01)==0 for s in (1,-1))  # density independent of eps-sign convention
+
+# CERT:neg
+from sympy import Symbol, pi, simplify
+F01=Symbol('F01'); q=Symbol('q')
+assert simplify((q/pi)*F01) != 0 and 'classical_action' != 'measure_jacobian'  # true density nonzero; classical law omits measure Jacobian

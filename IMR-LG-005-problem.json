@@ -1,0 +1,32 @@
+{
+  "family_id": "IMR-LG-005",
+  "record_id": "IMR-LG-005/canonical",
+  "module": "B-local-global",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Euler characteristic of the torus T^2: chi = 2 - 2g = 0 (g=1).",
+  "answer_type": {
+    "kind": "Integer",
+    "encoding": [
+      "euler_char"
+    ]
+  },
+  "type_spec": {
+    "euler_char": "int"
+  },
+  "gold": {
+    "euler_char": 0
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "closed_surface_gauss_bonnet"
+  ],
+  "exclusions": [
+    "wrong_genus"
+  ],
+  "certificate_level": "L2"
+}

@@ -1,0 +1,12 @@
+# certificate.sympy -- IMR-LG-001
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+th=symbols('theta'); assert integrate(1,(th,0,2*pi))==2*pi  # period of d(theta) on S^1
+
+# CERT:T2
+assert integrate(1,(symbols('t'),0,2*pi))==2*pi  # orientation-preserving reparam preserves period
+
+# CERT:neg
+th=symbols('theta'); assert integrate(1,(th,0,pi))==pi != 2*pi  # contractible arc, not the loop

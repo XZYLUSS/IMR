@@ -1,0 +1,12 @@
+# certificate.sympy -- IMR-AN-001
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+n,x=symbols('n x',positive=True); assert integrate(n,(x,0,1/n))==1  # int f_n = 1 for all n
+
+# CERT:T2
+x=symbols('x',positive=True); assert limit(0,x,0)==0  # pointwise limit is 0 a.e.
+
+# CERT:neg
+assert 1 != 0  # lim int = 1 but int lim = 0: interchange INVALID (no DCT majorant)

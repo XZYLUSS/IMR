@@ -1,0 +1,13 @@
+# certificate.sympy -- IMR-BV-003
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+t=symbols('t'); x=sin(t); v=cos(t); lhs=integrate(diff(x,t)*v,(t,0,pi)); rhs=(x*v).subs(t,pi)-(x*v).subs(t,0)-integrate(x*diff(v,t),(t,0,pi))
+assert simplify(lhs-rhs)==0  # IBP in time: EOM bulk + endpoint boundary
+
+# CERT:T2
+t=symbols('t'); x=sin(t); assert (diff(x,t)*x).subs(t,pi)-(diff(x,t)*x).subs(t,0)==0  # fixed-endpoint (Dirichlet-in-time): boundary term vanishes
+
+# CERT:neg
+t=symbols('t'); y=t; assert (diff(y,t)*y).subs(t,pi)-(diff(y,t)*y).subs(t,0)==pi and pi!=0  # generic endpoints: boundary term live -> NOT unconditional

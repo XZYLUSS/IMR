@@ -1,0 +1,13 @@
+# certificate.sympy -- IMR-BV-002
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+x=symbols('x'); f=sin(x); g=cos(x); lhs=integrate(diff(f,x)*g,(x,0,pi)); rhs=(f*g).subs(x,pi)-(f*g).subs(x,0)-integrate(f*diff(g,x),(x,0,pi))
+assert simplify(lhs-rhs)==0  # IBP for the kinetic term: bulk + boundary
+
+# CERT:T2
+x=symbols('x'); phi=sin(x); assert (diff(phi,x)*phi).subs(x,pi)-(diff(phi,x)*phi).subs(x,0)==0  # Dirichlet data: boundary term vanishes
+
+# CERT:neg
+x=symbols('x'); psi=x; assert (diff(psi,x)*psi).subs(x,pi)-(diff(psi,x)*psi).subs(x,0)==pi and pi!=0  # generic field: boundary term pi != 0 -> NOT unconditional

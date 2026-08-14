@@ -1,0 +1,15 @@
+# certificate.sympy -- IMR-TN-003
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+A=Matrix([[2,1],[0,3]]); B=Matrix([[1,4],[2,1]]); AB=Matrix(kronecker_product(A,B))
+assert AB.det()==A.det()**2*B.det()**2 and AB.det()==1764  # det(A kron B)=det(A)^n det(B)^m
+
+# CERT:T2
+A=Matrix([[2,1],[0,3]]); B=Matrix([[1,4],[2,1]]); P=Matrix([[1,1],[0,1]]); Q=Matrix([[1,0],[1,1]]); ABc=Matrix(kronecker_product(P.inv()*A*P,Q.inv()*B*Q))
+assert simplify(ABc.det())==1764  # invariant under factorwise basis change
+
+# CERT:neg
+A=Matrix([[2,1],[0,3]]); B=Matrix([[1,4],[2,1]]); AB=Matrix(kronecker_product(A,B)); P=eye(4); P[0,1]=1; ABc=P.inv()*AB*P
+assert AB[0,0]!=ABc[0,0]  # a component of A kron B is basis-dependent (non-natural)

@@ -1,0 +1,35 @@
+{
+  "family_id": "IMR-QD-004",
+  "record_id": "IMR-QD-004/canonical",
+  "module": "A-quotient-descent",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Trace and determinant of the SO(3) rotation by pi/2 (1+2cos t, det 1).",
+  "answer_type": {
+    "kind": "QuotientClass",
+    "encoding": [
+      "trace",
+      "det"
+    ]
+  },
+  "type_spec": {
+    "trace": "int",
+    "det": "int"
+  },
+  "gold": {
+    "trace": 1,
+    "det": 1
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "conjugacy_invariant"
+  ],
+  "exclusions": [
+    "matrix_entry"
+  ],
+  "certificate_level": "L2"
+}

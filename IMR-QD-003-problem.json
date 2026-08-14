@@ -1,0 +1,33 @@
+{
+  "family_id": "IMR-QD-003",
+  "record_id": "IMR-QD-003/canonical",
+  "module": "A-quotient-descent",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Quadratic Casimir C_2 = j(j+1) of the SU(2) spin-1 representation.",
+  "answer_type": {
+    "kind": "Integer",
+    "encoding": [
+      "casimir"
+    ]
+  },
+  "type_spec": {
+    "casimir": "int"
+  },
+  "gold": {
+    "casimir": 2
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "rep_invariant"
+  ],
+  "exclusions": [
+    "matrix_entry",
+    "basis_component"
+  ],
+  "certificate_level": "L2"
+}

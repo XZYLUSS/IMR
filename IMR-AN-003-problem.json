@@ -1,0 +1,32 @@
+{
+  "family_id": "IMR-AN-003",
+  "record_id": "IMR-AN-003/canonical",
+  "module": "C-analytic-regularization",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Sum_{n>=1} 1/n^2 = zeta(2) = pi^2/6 (absolutely convergent: rearrangement-invariant).",
+  "answer_type": {
+    "kind": "StructuralLabel",
+    "encoding": [
+      "value"
+    ]
+  },
+  "type_spec": {
+    "value": "label"
+  },
+  "gold": {
+    "value": "pi^2/6"
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "absolutely_convergent_sum"
+  ],
+  "exclusions": [
+    "conditionally_convergent_rearrangement"
+  ],
+  "certificate_level": "L2"
+}

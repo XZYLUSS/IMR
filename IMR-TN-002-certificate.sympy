@@ -1,0 +1,14 @@
+# certificate.sympy -- IMR-TN-002
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+A=Matrix([[2,1],[0,3]]); B=Matrix([[1,4],[2,1]]); P=Matrix([[1,1],[0,1]]); Ac=P.inv()*A*P; Bc=P.inv()*B*P; assert (Ac*Bc).trace()==(A*B).trace() and (Ac*Bc).det()==(A*B).det()
+
+# CERT:T2
+A=Matrix([[2,1],[0,3]]); B=Matrix([[1,4],[2,1]]); assert (B*A).trace()==(A*B).trace() and (B*A).det()==(A*B).det()  # cyclicity + multiplicativity
+
+# CERT:neg
+A=Matrix([[2,1],[0,3]]); B=Matrix([[1,4],[2,1]]); AB=A*B; P=Matrix([[1,1],[0,1]]); ABc=P.inv()*AB*P
+assert AB.trace()==ABc.trace()   # tr(AB)=7 is natural (basis-independent)
+assert AB[0,0] != ABc[0,0]       # a matrix component is non-natural (basis-dependent), not tr(AB)

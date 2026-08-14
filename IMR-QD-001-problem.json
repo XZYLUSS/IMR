@@ -1,0 +1,38 @@
+{
+  "family_id": "IMR-QD-001",
+  "record_id": "IMR-QD-001/canonical",
+  "module": "A-quotient-descent",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Report the conjugation invariants (trace, det, char. poly.) of the quarter-turn.",
+  "answer_type": {
+    "kind": "QuotientClass",
+    "encoding": [
+      "trace",
+      "det",
+      "char_poly"
+    ]
+  },
+  "type_spec": {
+    "trace": "int",
+    "det": "int",
+    "char_poly": "label"
+  },
+  "gold": {
+    "trace": 0,
+    "det": 1,
+    "char_poly": "lam^2+1"
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "conjugacy_class_invariant"
+  ],
+  "exclusions": [
+    "raw_matrix_entry"
+  ],
+  "certificate_level": "L2"
+}

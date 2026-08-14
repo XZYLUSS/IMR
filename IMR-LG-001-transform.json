@@ -1,0 +1,52 @@
+{
+  "family_id": "IMR-LG-001",
+  "transforms": [
+    {
+      "id": "T1",
+      "kind": "shift-rep-by-exact",
+      "produces_record": "IMR-LG-001/T1",
+      "transport": "identity",
+      "transported_gold": {
+        "globally_exact": "no",
+        "period": "2pi"
+      },
+      "certificate": "certificate.sympy#T1"
+    },
+    {
+      "id": "T2",
+      "kind": "orientation-preserving-reparam",
+      "produces_record": "IMR-LG-001/T2",
+      "transport": "identity",
+      "transported_gold": {
+        "globally_exact": "no",
+        "period": "2pi"
+      },
+      "certificate": "certificate.sympy#T2"
+    }
+  ],
+  "composite": {
+    "id": "T2oT1",
+    "transport": "identity",
+    "composite_gold": {
+      "globally_exact": "no",
+      "period": "2pi"
+    },
+    "certificate": "certificate.sympy#T2;certificate.sympy#T1"
+  },
+  "paraphrase": {
+    "id": "p",
+    "produces_record": "IMR-LG-001/paraphrase",
+    "content_change": false,
+    "note": "surface re-wording; gold identical"
+  },
+  "negative_control": {
+    "id": "n",
+    "produces_record": "IMR-LG-001/neg",
+    "answer": {
+      "globally_exact": "yes",
+      "period": 0
+    },
+    "anti_certificate": "certificate.sympy#neg",
+    "must_be_rejected_by_transport_checker": true
+  }
+}

@@ -1,0 +1,19 @@
+# certificate.sympy -- IMR-BV-004
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+x=symbols('x'); f=sin(x); g=cos(x)
+L=integrate(diff(f,x,2)*diff(g,x,2),(x,0,pi))
+R=(diff(f,x,2)*diff(g,x)).subs(x,pi)-(diff(f,x,2)*diff(g,x)).subs(x,0)-(diff(f,x,3)*g).subs(x,pi)+(diff(f,x,3)*g).subs(x,0)+integrate(diff(f,x,4)*g,(x,0,pi))
+assert simplify(L-R)==0  # double IBP: bulk biharmonic lap^2(phi) + two boundary terms
+
+# CERT:T2
+x=symbols('x'); cl=sin(x)**2
+bt=(diff(cl,x,2)*diff(cl,x)).subs(x,pi)-(diff(cl,x,2)*diff(cl,x)).subs(x,0)-(diff(cl,x,3)*cl).subs(x,pi)+(diff(cl,x,3)*cl).subs(x,0)
+assert bt==0  # clamped data (field and slope zero at both ends): both boundary terms vanish
+
+# CERT:neg
+x=symbols('x'); ge=x**2
+bt=(diff(ge,x,2)*diff(ge,x)).subs(x,pi)-(diff(ge,x,2)*diff(ge,x)).subs(x,0)-(diff(ge,x,3)*ge).subs(x,pi)+(diff(ge,x,3)*ge).subs(x,0)
+assert bt==4*pi and 4*pi!=0  # generic data: boundary terms = 4 pi != 0 -> NOT unconditional

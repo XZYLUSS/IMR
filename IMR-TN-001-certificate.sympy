@@ -1,0 +1,14 @@
+# certificate.sympy -- IMR-TN-001
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+A=Matrix([[2,0],[0,3]]); P=Matrix([[1,1],[0,1]]); assert (P.inv()*A*P).trace()==A.trace() and (P.inv()*A*P).det()==A.det()
+
+# CERT:T2
+A=Matrix([[2,0],[0,3]]); Q=diag(1,2); assert (Q.inv()*A*Q).trace()==A.trace() and (Q.inv()*A*Q).det()==A.det()
+
+# CERT:neg
+A=Matrix([[2,0],[0,3]]); P=Matrix([[1,0],[1,1]]); Ac=P.inv()*A*P
+vA=A.eigenvects()[0][2][0]; vAc=Ac.eigenvects()[0][2][0]
+assert vA != vAc  # eigenvector components change under basis change: non-natural readout

@@ -1,0 +1,32 @@
+{
+  "family_id": "IMR-AN-002",
+  "record_id": "IMR-AN-002/canonical",
+  "module": "C-analytic-regularization",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Residue of 1/z at 0 (so oint_{|z|=1} dz/z = 2 pi i): residue = 1.",
+  "answer_type": {
+    "kind": "Integer",
+    "encoding": [
+      "residue"
+    ]
+  },
+  "type_spec": {
+    "residue": "int"
+  },
+  "gold": {
+    "residue": 1
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "contour_residue"
+  ],
+  "exclusions": [
+    "regular_point_residue"
+  ],
+  "certificate_level": "L2"
+}

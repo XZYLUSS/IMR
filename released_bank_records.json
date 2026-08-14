@@ -1,0 +1,241 @@
+{
+  "families": {
+    "IMR-AM-001": {
+      "answer_coordinates": [
+        "physical_density",
+        "origin"
+      ],
+      "certificate_rung": "V1",
+      "module": "D",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-AM-002": {
+      "answer_coordinates": [
+        "coeff_num",
+        "structure",
+        "origin"
+      ],
+      "certificate_rung": "V1",
+      "module": "D",
+      "n_transforms": 2,
+      "non_identity_transport": true
+    },
+    "IMR-AM-003": {
+      "answer_coordinates": [
+        "index",
+        "origin"
+      ],
+      "certificate_rung": "V1",
+      "module": "D",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-AM-004": {
+      "answer_coordinates": [
+        "central_charge",
+        "origin"
+      ],
+      "certificate_rung": "V1",
+      "module": "D",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-AN-001": {
+      "answer_coordinates": [
+        "lim_int",
+        "int_lim",
+        "interchange_valid"
+      ],
+      "certificate_rung": "V2",
+      "module": "C",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-AN-002": {
+      "answer_coordinates": [
+        "residue"
+      ],
+      "certificate_rung": "V2",
+      "module": "C",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-AN-003": {
+      "answer_coordinates": [
+        "value"
+      ],
+      "certificate_rung": "V2",
+      "module": "C",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-AN-004": {
+      "answer_coordinates": [
+        "integral"
+      ],
+      "certificate_rung": "V2",
+      "module": "C",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-BV-001": {
+      "answer_coordinates": [
+        "bulk",
+        "boundary_vanishes_iff"
+      ],
+      "certificate_rung": "V2",
+      "module": "E",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-BV-002": {
+      "answer_coordinates": [
+        "bulk",
+        "boundary_vanishes_iff"
+      ],
+      "certificate_rung": "V2",
+      "module": "E",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-BV-003": {
+      "answer_coordinates": [
+        "bulk",
+        "boundary_vanishes_iff"
+      ],
+      "certificate_rung": "V2",
+      "module": "E",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-BV-004": {
+      "answer_coordinates": [
+        "bulk",
+        "boundary_vanishes_iff"
+      ],
+      "certificate_rung": "V2",
+      "module": "E",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-LG-001": {
+      "answer_coordinates": [
+        "globally_exact",
+        "period"
+      ],
+      "certificate_rung": "V2",
+      "module": "B",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-LG-002": {
+      "answer_coordinates": [
+        "chern_number"
+      ],
+      "certificate_rung": "V2",
+      "module": "B",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-LG-004": {
+      "answer_coordinates": [
+        "euler_char"
+      ],
+      "certificate_rung": "V2",
+      "module": "B",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-LG-005": {
+      "answer_coordinates": [
+        "euler_char"
+      ],
+      "certificate_rung": "V2",
+      "module": "B",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-QD-001": {
+      "answer_coordinates": [
+        "trace",
+        "det",
+        "char_poly"
+      ],
+      "certificate_rung": "V2",
+      "module": "A",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-QD-002": {
+      "answer_coordinates": [
+        "wilson_loop"
+      ],
+      "certificate_rung": "V2",
+      "module": "A",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-QD-003": {
+      "answer_coordinates": [
+        "casimir"
+      ],
+      "certificate_rung": "V2",
+      "module": "A",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-QD-004": {
+      "answer_coordinates": [
+        "trace",
+        "det"
+      ],
+      "certificate_rung": "V2",
+      "module": "A",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-TN-001": {
+      "answer_coordinates": [
+        "trace",
+        "det",
+        "char_poly",
+        "spec"
+      ],
+      "certificate_rung": "V2",
+      "module": "F",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-TN-002": {
+      "answer_coordinates": [
+        "tr_AB",
+        "det_AB"
+      ],
+      "certificate_rung": "V2",
+      "module": "F",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-TN-003": {
+      "answer_coordinates": [
+        "det_kron"
+      ],
+      "certificate_rung": "V2",
+      "module": "F",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    },
+    "IMR-TN-004": {
+      "answer_coordinates": [
+        "tr_comm"
+      ],
+      "certificate_rung": "V2",
+      "module": "F",
+      "n_transforms": 2,
+      "non_identity_transport": false
+    }
+  },
+  "note": "The 24 families actually present in the released calibration bank.",
+  "schema": "imr-released-bank/1"
+}

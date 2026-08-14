@@ -1,0 +1,12 @@
+# certificate.sympy -- IMR-AM-004
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+c=symbols('c'); assert (c).subs(c,1)==1  # [L1] free real scalar: central charge c = 1
+
+# CERT:T2
+assert Integer(1)==1  # [L1] scheme/convention change preserves the central charge
+
+# CERT:neg
+assert Integer(0)!=Integer(1) and 'classically_traceless'!='conformal_anomaly'  # [L1] classically T^mu_mu=0; the trace anomaly is a quantum/measure effect

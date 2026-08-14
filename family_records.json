@@ -1,0 +1,74 @@
+[
+  {
+    "family_id": "IMR-QD-005",
+    "module": "A",
+    "rung": "L2; L3 target",
+    "answer_type": "SU2MatrixWithTrace",
+    "tau_identity": false,
+    "canonical_gold": {"holonomy_matrix": "diag(exp(i*pi/3), exp(-i*pi/3))", "trace": "1"},
+    "T1": {"name": "g1 conjugation", "transport": "U -> g1^-1 U g1", "gold": "g1^-1 U0 g1"},
+    "T2": {"name": "g2 conjugation", "transport": "U -> g2^-1 U g2", "gold": "g2^-1 U0 g2"},
+    "negative_control": "report untransported U0 after conjugation",
+    "parser_aliases": ["holonomy", "Wilson_line", "parallel_transport", "trace"]
+  },
+  {
+    "family_id": "IMR-LG-006",
+    "module": "B",
+    "rung": "L2; L3 target",
+    "answer_type": "PeriodClassInteger",
+    "tau_identity": true,
+    "canonical_gold": {"period": "2*pi", "period_class": "1", "globally_exact": "no"},
+    "T1": {"name": "orientation-preserving reparametrization", "transport": "period -> period", "gold": "2*pi"},
+    "T2": {"name": "add exact form d(cos theta)", "transport": "period -> period", "gold": "2*pi"},
+    "negative_control": "local exactness implies global exactness, period=0",
+    "parser_aliases": ["period", "de_Rham_class", "winding", "cohomology_class"]
+  },
+  {
+    "family_id": "IMR-AN-005",
+    "module": "C",
+    "rung": "L2; L3 target",
+    "answer_type": "LimitIntegralValue",
+    "tau_identity": true,
+    "canonical_gold": {"limit_of_integrals": "1", "integral_of_limit": "0", "interchange_valid": "no"},
+    "T1": {"name": "support rescaling x=u/n with measure", "transport": "value -> value", "gold": "1"},
+    "T2": {"name": "normalized bump presentation", "transport": "value -> value", "gold": "1"},
+    "negative_control": "interchange limit and integral without domination, value=0",
+    "parser_aliases": ["limit_of_integrals", "value", "lim_int", "interchange"]
+  },
+  {
+    "family_id": "IMR-AM-005",
+    "module": "D",
+    "rung": "L1 physics coefficient; L2 transport algebra",
+    "answer_type": "ThetaAngleMod2Pi",
+    "tau_identity": false,
+    "canonical_gold": {"theta_eff": "theta0", "origin": "measure_jacobian"},
+    "T1": {"name": "chiral rotation alpha=pi/2", "transport": "theta -> theta + pi", "gold": "theta0 + pi"},
+    "T2": {"name": "chiral rotation alpha=pi/4", "transport": "theta -> theta + pi/2", "gold": "theta0 + pi/2"},
+    "negative_control": "classical action-only delta theta=0",
+    "parser_aliases": ["theta", "theta_eff", "vacuum_angle", "topological_angle"]
+  },
+  {
+    "family_id": "IMR-BV-005",
+    "module": "E",
+    "rung": "L2",
+    "answer_type": "BulkBoundaryMomentum",
+    "tau_identity": false,
+    "canonical_gold": {"bulk_eom": "xddot + Vprime(x) = 0", "momentum": "xdot"},
+    "T1": {"name": "add d/dt(x^2)", "transport": "p -> p + 2*x", "gold": "bulk unchanged; p=xdot+2*x"},
+    "T2": {"name": "add d/dt(x^3)", "transport": "p -> p + 3*x^2", "gold": "bulk unchanged; p=xdot+3*x^2"},
+    "negative_control": "total derivative has no boundary effect, p remains xdot",
+    "parser_aliases": ["euler_lagrange", "boundary_term", "canonical_momentum", "surface_term"]
+  },
+  {
+    "family_id": "IMR-TN-005",
+    "module": "F",
+    "rung": "L2; L3 target",
+    "answer_type": "SL2ZChargeVectorWithDSZ",
+    "tau_identity": false,
+    "canonical_gold": {"charge_vector": "(2,1)", "reference": "(1,3)", "DSZ": "5"},
+    "T1": {"name": "S duality", "transport": "(qe,qm) -> (qm,-qe)", "gold": "(1,-2)"},
+    "T2": {"name": "T duality", "transport": "(qe,qm) -> (qe+qm,qm)", "gold": "(3,1)"},
+    "negative_control": "identity transport of charge vector in dual frame",
+    "parser_aliases": ["charge_vector", "(q_e,q_m)", "dyon_charge", "DSZ_pairing"]
+  }
+]

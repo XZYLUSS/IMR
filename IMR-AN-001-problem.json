@@ -1,0 +1,38 @@
+{
+  "family_id": "IMR-AN-001",
+  "record_id": "IMR-AN-001/canonical",
+  "module": "C-analytic-regularization",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "For f_n = n*1_{[0,1/n]}: give lim-int, int-lim, and whether interchange is valid.",
+  "answer_type": {
+    "kind": "Compound",
+    "encoding": [
+      "lim_int",
+      "int_lim",
+      "interchange_valid"
+    ]
+  },
+  "type_spec": {
+    "lim_int": "int",
+    "int_lim": "int",
+    "interchange_valid": "label"
+  },
+  "gold": {
+    "lim_int": 1,
+    "int_lim": 0,
+    "interchange_valid": "no"
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "limit_integral_values"
+  ],
+  "exclusions": [
+    "dct_valid_sequence"
+  ],
+  "certificate_level": "L2"
+}

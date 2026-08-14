@@ -1,0 +1,35 @@
+{
+  "family_id": "IMR-AM-004",
+  "record_id": "IMR-AM-004/canonical",
+  "module": "D-anomaly-measure",
+  "source_stratum": "convention_ledger",
+  "presentation": "2D conformal anomaly: central charge of a free real scalar c = 1 (trace anomaly).",
+  "answer_type": {
+    "kind": "Compound",
+    "encoding": [
+      "central_charge",
+      "origin"
+    ]
+  },
+  "type_spec": {
+    "central_charge": "int",
+    "origin": "label"
+  },
+  "gold": {
+    "central_charge": 1,
+    "origin": "conformal_anomaly"
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "central_charge_in_convention"
+  ],
+  "exclusions": [
+    "classical_trace_zero"
+  ],
+  "certificate_level": "L1"
+}

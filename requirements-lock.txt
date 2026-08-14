@@ -1,0 +1,6 @@
+# Exact package versions of the environment in which this release was verified.
+# Installable with: python3 -m pip install -r requirements-lock.txt
+# The interpreter version is NOT a pip requirement; see .python-version.
+numpy==2.4.4
+sympy==1.14.0
+pytest==9.1.1

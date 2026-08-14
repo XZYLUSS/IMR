@@ -1,0 +1,12 @@
+# certificate.sympy -- IMR-LG-004
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+th,ph=symbols('theta phi'); assert integrate(integrate(sin(th),(th,0,pi)),(ph,0,2*pi))/(2*pi)==2  # Gauss-Bonnet, unit S^2
+
+# CERT:T2
+th,ph,r=symbols('theta phi r',positive=True); assert integrate(integrate((1/r**2)*r**2*sin(th),(th,0,pi)),(ph,0,2*pi))/(2*pi)==2  # K dA scale-invariant -> chi=2
+
+# CERT:neg
+th,ph=symbols('theta phi'); assert integrate(integrate(sin(th),(th,0,pi/2)),(ph,0,2*pi))/(2*pi)==1 and 1!=2  # hemisphere (with boundary): not the closed value

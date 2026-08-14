@@ -1,0 +1,32 @@
+{
+  "family_id": "IMR-TN-003",
+  "record_id": "IMR-TN-003/canonical",
+  "module": "F-transport-naturality",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Determinant of A (x) B for 2x2 A,B: det(A)^2 det(B)^2 = 1764.",
+  "answer_type": {
+    "kind": "Integer",
+    "encoding": [
+      "det_kron"
+    ]
+  },
+  "type_spec": {
+    "det_kron": "int"
+  },
+  "gold": {
+    "det_kron": 1764
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "natural_invariant"
+  ],
+  "exclusions": [
+    "matrix_entry"
+  ],
+  "certificate_level": "L2"
+}

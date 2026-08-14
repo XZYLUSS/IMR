@@ -1,0 +1,21 @@
+# certificate.sympy -- IMR-BV-001
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+from sympy import symbols, sin, cos, diff, integrate, pi, simplify
+x=symbols('x'); f=sin(x); g=cos(x)
+lhs=integrate(diff(f,x)*g,(x,0,pi))
+rhs=(f*g).subs(x,pi)-(f*g).subs(x,0)-integrate(f*diff(g,x),(x,0,pi))
+assert simplify(lhs-rhs)==0  # IBP: variation = bulk term + boundary term
+
+# CERT:T2
+from sympy import symbols, sin, pi
+x=symbols('x')
+assert (sin(x)).subs(x,pi)-(sin(x)).subs(x,0)==0   # Dirichlet data: boundary term vanishes
+assert (x).subs(x,pi)-(x).subs(x,0)!=0             # generic data: boundary term is LIVE (conditional)
+
+# CERT:neg
+x=symbols('x')
+assert (cos(x)*sin(x)).subs(x,pi)-(cos(x)*sin(x)).subs(x,0)==0   # Dirichlet data: boundary term vanishes
+assert (x).subs(x,pi)-(x).subs(x,0)==pi and pi!=0   # generic data: boundary term = pi != 0 -> NOT unconditional

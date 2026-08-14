@@ -1,0 +1,15 @@
+# certificate.sympy -- IMR-QD-003
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+j=Integer(1); assert j*(j+1)==2  # quadratic Casimir of the spin-1 rep (basis-independent)
+
+# CERT:T2
+s=1/sqrt(2); Jx=Matrix([[0,s,0],[s,0,s],[0,s,0]]); Jy=Matrix([[0,-I*s,0],[I*s,0,-I*s],[0,I*s,0]]); Jz=diag(1,0,-1)
+assert simplify((Jx**2+Jy**2+Jz**2)-2*eye(3))==zeros(3)  # C2 = Jx^2+Jy^2+Jz^2 = 2 I for spin-1
+
+# CERT:neg
+s=1/sqrt(2); Jx=Matrix([[0,s,0],[s,0,s],[0,s,0]]); Jy=Matrix([[0,-I*s,0],[I*s,0,-I*s],[0,I*s,0]]); Jz=diag(1,0,-1)
+C2=Jx**2+Jy**2+Jz**2; P=Matrix([[0,0,1],[0,1,0],[1,0,0]])
+assert simplify(C2-2*eye(3))==zeros(3) and (P*Jz*P.inv())[0,0]!=Jz[0,0] and simplify(P*C2*P.inv()-C2)==zeros(3)  # Casimir C2=2I is basis-independent; a GENERATOR component (Jz)_00 moves 1 -> -1 under a pi-rotation basis change. Not an entry of C2.

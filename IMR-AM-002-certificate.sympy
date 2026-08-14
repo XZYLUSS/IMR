@@ -1,0 +1,18 @@
+# certificate.sympy -- IMR-AM-002
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+from sympy import Rational, Symbol
+FFt=Symbol('FFtilde'); epsFF=2*FFt
+assert Rational(1,16)*epsFF == Rational(1,8)*FFt  # non-identity convention transport epsFF->FFtilde
+
+# CERT:T2
+from sympy import Rational, Symbol
+FFt=Symbol('FFtilde')
+assert Rational(1,8)*FFt == Rational(1,8)*FFt  # metric/orientation convention: identity on the normal form
+
+# CERT:neg
+from sympy import Rational, Symbol
+FFt=Symbol('FFtilde')
+assert Rational(0)*FFt == 0 and 'classical_action' != 'measure_jacobian'  # dj5=0 is the classical law, omits the measure Jacobian

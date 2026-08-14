@@ -1,0 +1,13 @@
+# certificate.sympy -- IMR-QD-004
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+R=Matrix([[cos(pi/2),-sin(pi/2),0],[sin(pi/2),cos(pi/2),0],[0,0,1]]); P=Matrix([[1,1,0],[0,1,0],[0,0,1]])
+assert simplify((P.inv()*R*P).trace()-R.trace())==0 and simplify((P.inv()*R*P).det()-R.det())==0
+
+# CERT:T2
+R=Matrix([[cos(pi/2),-sin(pi/2),0],[sin(pi/2),cos(pi/2),0],[0,0,1]]); assert R.trace()==1 and R.det()==1  # 1+2cos(pi/2)=1
+
+# CERT:neg
+assert (1+2*cos(pi/3))==2 and 2!=1  # rotation by pi/3 has trace 2: a DIFFERENT conjugacy class

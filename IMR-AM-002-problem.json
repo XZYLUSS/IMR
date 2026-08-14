@@ -1,0 +1,38 @@
+{
+  "family_id": "IMR-AM-002",
+  "record_id": "IMR-AM-002/canonical",
+  "module": "D-anomaly-measure",
+  "source_stratum": "convention_ledger",
+  "presentation": "4D ABJ anomaly (under the convention ledger): rational coefficient of q^2/pi^2, structure in {epsFF,FFtilde}, and origin.",
+  "answer_type": {
+    "kind": "ConventionCoefficient",
+    "encoding": [
+      "coeff_num",
+      "structure",
+      "origin"
+    ]
+  },
+  "type_spec": {
+    "coeff_num": "rational",
+    "structure": "label",
+    "origin": "label"
+  },
+  "gold": {
+    "coeff_num": "1/16",
+    "structure": "epsFF",
+    "origin": "measure_jacobian"
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "coefficient_in_stated_convention"
+  ],
+  "exclusions": [
+    "raw_coefficient_without_convention"
+  ],
+  "certificate_level": "L1"
+}

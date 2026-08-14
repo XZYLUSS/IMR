@@ -1,0 +1,12 @@
+# certificate.sympy -- IMR-AN-004
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+a=symbols('a',positive=True); u=symbols('u'); assert simplify(integrate(exp(-u**2/a**2),(u,-oo,oo))/a-sqrt(pi))==0  # x=u/a WITH the 1/a Jacobian -> sqrt(pi)
+
+# CERT:T2
+x=symbols('x'); assert integrate(exp(-x**2),(x,-oo,oo))==sqrt(pi)  # even symmetry x->-x preserves the value
+
+# CERT:neg
+u=symbols('u'); assert integrate(exp(-u**2/4),(u,-oo,oo))==2*sqrt(pi) and 2*sqrt(pi)!=sqrt(pi)  # concrete a=2, Jacobian dropped: 2 sqrt(pi) != sqrt(pi)

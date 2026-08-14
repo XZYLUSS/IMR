@@ -1,0 +1,35 @@
+{
+  "family_id": "IMR-BV-004",
+  "record_id": "IMR-BV-004/canonical",
+  "module": "E-boundary-variation",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Vary S=int 1/2 (phi'')^2: EL class biharmonic lap^2(phi)=0 up to nonzero scalar, plus TWO boundary terms vanishing under clamped/free/simply-supported/compact data.",
+  "answer_type": {
+    "kind": "Compound",
+    "encoding": [
+      "bulk",
+      "boundary_vanishes_iff"
+    ]
+  },
+  "type_spec": {
+    "bulk": "label",
+    "boundary_vanishes_iff": "label"
+  },
+  "gold": {
+    "bulk": "lap^2(phi)",
+    "boundary_vanishes_iff": "{clamped,free,simply_supported,compact}"
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "optional",
+    "witness": "required"
+  },
+  "allowed_forms": [
+    "bulk_plus_two_conditional_boundary_terms"
+  ],
+  "exclusions": [
+    "unconditional_vanishing"
+  ],
+  "certificate_level": "L2"
+}

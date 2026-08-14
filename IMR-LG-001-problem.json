@@ -1,0 +1,35 @@
+{
+  "family_id": "IMR-LG-001",
+  "record_id": "IMR-LG-001/canonical",
+  "module": "B-local-global",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Is d(theta) globally exact on S^1, and what is its period?",
+  "answer_type": {
+    "kind": "BooleanWithWitness",
+    "encoding": [
+      "globally_exact",
+      "period"
+    ]
+  },
+  "type_spec": {
+    "globally_exact": "label",
+    "period": "label"
+  },
+  "gold": {
+    "globally_exact": "no",
+    "period": "2pi"
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "optional",
+    "witness": "required"
+  },
+  "allowed_forms": [
+    "closed_loop_period"
+  ],
+  "exclusions": [
+    "contractible_arc_period"
+  ],
+  "certificate_level": "L2"
+}

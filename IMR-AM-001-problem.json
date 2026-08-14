@@ -1,0 +1,35 @@
+{
+  "family_id": "IMR-AM-001",
+  "record_id": "IMR-AM-001/canonical",
+  "module": "D-anomaly-measure",
+  "source_stratum": "convention_ledger",
+  "presentation": "2D axial anomaly: give the anomalous divergence density and its origin.",
+  "answer_type": {
+    "kind": "StructuralLabel",
+    "encoding": [
+      "physical_density",
+      "origin"
+    ]
+  },
+  "type_spec": {
+    "physical_density": "label",
+    "origin": "label"
+  },
+  "gold": {
+    "physical_density": "(q/pi)F01",
+    "origin": "measure_jacobian"
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "anomaly_density_in_convention"
+  ],
+  "exclusions": [
+    "classical_conservation"
+  ],
+  "certificate_level": "L1"
+}

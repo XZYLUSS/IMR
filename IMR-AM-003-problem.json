@@ -1,0 +1,35 @@
+{
+  "family_id": "IMR-AM-003",
+  "record_id": "IMR-AM-003/canonical",
+  "module": "D-anomaly-measure",
+  "source_stratum": "convention_ledger",
+  "presentation": "Atiyah-Singer index ind D_R = 2 T(R) k; SU(2) fundamental T(R)=1/2, charge k=1 => net Dirac zero modes = 1.",
+  "answer_type": {
+    "kind": "Compound",
+    "encoding": [
+      "index",
+      "origin"
+    ]
+  },
+  "type_spec": {
+    "index": "int",
+    "origin": "label"
+  },
+  "gold": {
+    "index": 1,
+    "origin": "measure_jacobian"
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "index_from_anomaly"
+  ],
+  "exclusions": [
+    "classical_no_zero_modes"
+  ],
+  "certificate_level": "L1"
+}

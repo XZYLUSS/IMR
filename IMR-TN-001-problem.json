@@ -1,0 +1,41 @@
+{
+  "family_id": "IMR-TN-001",
+  "record_id": "IMR-TN-001/canonical",
+  "module": "F-transport-naturality",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Report the similarity invariants (trace, det, char. poly., spectrum).",
+  "answer_type": {
+    "kind": "QuotientClass",
+    "encoding": [
+      "trace",
+      "det",
+      "char_poly",
+      "spec"
+    ]
+  },
+  "type_spec": {
+    "trace": "int",
+    "det": "int",
+    "char_poly": "label",
+    "spec": "label"
+  },
+  "gold": {
+    "trace": 5,
+    "det": 6,
+    "char_poly": "lam^2-5lam+6",
+    "spec": "{2,3}"
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "similarity_invariant"
+  ],
+  "exclusions": [
+    "matrix_entry"
+  ],
+  "certificate_level": "L2"
+}

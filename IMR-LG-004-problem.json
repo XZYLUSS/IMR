@@ -1,0 +1,32 @@
+{
+  "family_id": "IMR-LG-004",
+  "record_id": "IMR-LG-004/canonical",
+  "module": "B-local-global",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Euler characteristic of S^2 via Gauss-Bonnet: (1/2pi) int K dA = 2.",
+  "answer_type": {
+    "kind": "Integer",
+    "encoding": [
+      "euler_char"
+    ]
+  },
+  "type_spec": {
+    "euler_char": "int"
+  },
+  "gold": {
+    "euler_char": 2
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "closed_surface_gauss_bonnet"
+  ],
+  "exclusions": [
+    "bounded_domain"
+  ],
+  "certificate_level": "L2"
+}

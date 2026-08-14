@@ -1,0 +1,12 @@
+# certificate.sympy -- IMR-LG-005
+# CAS-checkable certificate for the certified transforms and the anti-equivalence.
+from sympy import *
+
+# CERT:T1
+g=symbols('g',integer=True); assert (2-2*g).subs(g,1)==0  # chi(T^2)=2-2g, g=1
+
+# CERT:T2
+u,v=symbols('u v'); assert integrate(integrate(Integer(0),(u,0,1)),(v,0,1))/(2*pi)==0  # flat torus K=0 -> chi=0
+
+# CERT:neg
+g=symbols('g',integer=True); assert (2-2*g).subs(g,0)==2 and 2!=0  # genus-0 sphere has chi 2, not the torus

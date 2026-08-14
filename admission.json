@@ -1,0 +1,442 @@
+{
+  "families": {
+    "IMR-AM-001": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V1",
+      "confirmatory_eligible": false,
+      "module": "D",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "certificate rung below V2",
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-AM-002": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V1",
+      "confirmatory_eligible": false,
+      "module": "D",
+      "ni_control": false,
+      "non_identity_transport": true,
+      "reasons_ineligible": [
+        "certificate rung below V2",
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-AM-003": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V1",
+      "confirmatory_eligible": false,
+      "module": "D",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "certificate rung below V2",
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-AM-004": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V1",
+      "confirmatory_eligible": false,
+      "module": "D",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "certificate rung below V2",
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-AN-001": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "C",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-AN-002": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "C",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-AN-003": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "C",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-AN-004": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "C",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-BV-001": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "E",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-BV-002": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "E",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-BV-003": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "E",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-BV-004": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "E",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-LG-001": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "B",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-LG-002": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "B",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-LG-004": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "B",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-LG-005": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "B",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-QD-001": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "A",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-QD-002": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "A",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-QD-003": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "A",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-QD-004": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "A",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-TN-001": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "F",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-TN-002": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "F",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-TN-003": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "F",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    },
+    "IMR-TN-004": {
+      "arms": {
+        "structural": 2,
+        "surface": 1
+      },
+      "certificate_rung": "V2",
+      "confirmatory_eligible": false,
+      "module": "F",
+      "ni_control": false,
+      "non_identity_transport": false,
+      "reasons_ineligible": [
+        "negative control is type N-ii, not N-i",
+        "surface control not complexity-matched"
+      ],
+      "replicates_per_arm": 4,
+      "surface_complexity_matched": false
+    }
+  },
+  "frozen": "2026-07-31",
+  "policy": {
+    "arms_per_family": {
+      "structural": 2,
+      "surface": 1
+    },
+    "excluded_modules": [
+      "D"
+    ],
+    "min_certificate_rung": "V2",
+    "module_D_transition": "Module D becomes eligible only when all four of its families carry V2 certificates (symbolic re-derivation of the transport identity, replacing the V1 convention ledger) AND carry type N-i negative controls AND complexity-matched surface controls. Until then the six-module universe cannot be fully eligible, so no confirmatory analysis is permitted: the evaluator gate is a maximum over the frozen six-module universe and cannot be evaluated on five.",
+    "module_universe": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "note": "Confirmatory eligibility for the released calibration bank is FALSE for every family: the bank is a pipeline and calibration instrument, not a confirmatory one. run_confirmatory_analysis requires this manifest and fails closed without it; a confirmatory run requires a manifest in which the eligibility flags are true, which this bank cannot yet supply.",
+    "replicates_per_arm": 4,
+    "require_ni_control": true,
+    "require_surface_complexity_matched": true
+  },
+  "schema": "imr-admission/2",
+  "version": "2.0.0"
+}

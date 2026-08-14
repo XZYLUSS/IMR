@@ -1,0 +1,32 @@
+{
+  "family_id": "IMR-AN-004",
+  "record_id": "IMR-AN-004/canonical",
+  "module": "C-analytic-regularization",
+  "source_stratum": "synthetic_algorithmic",
+  "presentation": "Gaussian int_{-inf}^{inf} e^{-x^2} dx = sqrt(pi); transform x=u/a keeps it sqrt(pi) only WITH the 1/a Jacobian. Concrete scale a=2.",
+  "answer_type": {
+    "kind": "StructuralLabel",
+    "encoding": [
+      "integral"
+    ]
+  },
+  "type_spec": {
+    "integral": "label"
+  },
+  "gold": {
+    "integral": "sqrt(pi)"
+  },
+  "obligation_mask": {
+    "verdict": "required",
+    "type": "enforced",
+    "mechanism": "required",
+    "witness": "optional"
+  },
+  "allowed_forms": [
+    "substitution_with_jacobian"
+  ],
+  "exclusions": [
+    "substitution_without_jacobian"
+  ],
+  "certificate_level": "L2"
+}
